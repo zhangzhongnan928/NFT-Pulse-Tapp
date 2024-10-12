@@ -34,6 +34,7 @@ Key Features:
 - Integration with ERC-7738 contract for TokenScript registration
 
 ### Part 2: TokenScript
+TLink: https://x.com/Victor928/status/1845018599141814423
 
 TokenScript is an XML-based markup language that describes the functions of the token and methods to interact with it. It's used to create rich, interactive experiences for NFTs.
 
