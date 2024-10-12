@@ -23,7 +23,7 @@
     <ts:cards>
         <ts:card type="action" name="MoonVote">
             <ts:label>
-                <ts:string xml:lang="en">🚀 Moon Vote</ts:string>
+                <ts:string xml:lang="en">👍 Moon</ts:string>
             </ts:label>
             <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
                 <!-- 这里保留原有的 HTML 和 JavaScript 代码 -->
@@ -32,7 +32,7 @@
 
         <ts:card type="action" name="DiamondHands">
             <ts:label>
-                <ts:string xml:lang="en">💎 Diamond Hands</ts:string>
+                <ts:string xml:lang="en">👎 Rekt</ts:string>
             </ts:label>
             <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
                 <!-- 这里保留原有的 HTML 和 JavaScript 代码 -->
@@ -41,7 +41,7 @@
 
         <ts:card type="action" name="MemeForge">
             <ts:label>
-                <ts:string xml:lang="en">🔗 Meme Forge</ts:string>
+                <ts:string xml:lang="en">Leader Board</ts:string>
             </ts:label>
             <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
                 <!-- 这里保留原有的 HTML 和 JavaScript 代码 -->
@@ -50,7 +50,7 @@
 
         <ts:card type="action" name="Hodlverse">
             <ts:label>
-                <ts:string xml:lang="en">🌌 Hodlverse</ts:string>
+                <ts:string xml:lang="en">Share your NFT</ts:string>
             </ts:label>
             <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
                 <!-- 这里保留原有的 HTML 和 JavaScript 代码 -->
