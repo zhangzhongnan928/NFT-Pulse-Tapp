@@ -14,8 +14,18 @@
     </ts:contract>
     
     <ts:origins>
-        <ethereum:event contract="NFTPulseToken" filter="Transfer" type="TokenId"/>
+        <ethereum:event contract="NFTPulseToken" type="Transfer" filter="to=${ownerAddress}">
+            <ts:data>
+                <ts:uint256 ref="tokenId"/>
+            </ts:data>
+        </ethereum:event>
     </ts:origins>
+    
+    <ts:selection filter="(tokenId=${tokenId})">
+        <ts:label>
+            <ts:string xml:lang="en">NFT Pulse Token #${tokenId}</ts:string>
+        </ts:label>
+    </ts:selection>
     
     <ts:cards>
         <ts:card type="action" name="MoonVote">
