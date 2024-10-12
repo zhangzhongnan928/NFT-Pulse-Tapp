@@ -21,7 +21,7 @@
     </ts:origins>
     
     <ts:cards>
-        <ts:card type="action" name="MoonVote">
+        <ts:card type="action" name="Moon">
             <ts:label>
                 <ts:string xml:lang="en">👍 Moon</ts:string>
             </ts:label>
@@ -30,7 +30,7 @@
             </ts:view>
         </ts:card>
 
-        <ts:card type="action" name="DiamondHands">
+        <ts:card type="action" name="Rekt">
             <ts:label>
                 <ts:string xml:lang="en">👎 Rekt</ts:string>
             </ts:label>
@@ -39,7 +39,7 @@
             </ts:view>
         </ts:card>
 
-        <ts:card type="action" name="MemeForge">
+        <ts:card type="action" name="LeaderBoard">
             <ts:label>
                 <ts:string xml:lang="en">Leader Board</ts:string>
             </ts:label>
@@ -48,7 +48,7 @@
             </ts:view>
         </ts:card>
 
-        <ts:card type="action" name="Hodlverse">
+        <ts:card type="action" name="ShareyourNFT">
             <ts:label>
                 <ts:string xml:lang="en">Share your NFT</ts:string>
             </ts:label>
@@ -58,12 +58,12 @@
         </ts:card>
     </ts:cards>
     
-    <ts:attribute name="moonVotes">
+    <ts:attribute name="moon">
         <ts:type>
             <ts:syntax>1.3.6.1.4.1.1466.115.121.1.27</ts:syntax>
         </ts:type>
         <ts:label>
-            <ts:string xml:lang="en">Moon Votes</ts:string>
+            <ts:string xml:lang="en">Moon</ts:string>
         </ts:label>
         <ts:origins>
             <ethereum:call function="getMoonVotes" contract="NFTPulseToken" as="uint">
