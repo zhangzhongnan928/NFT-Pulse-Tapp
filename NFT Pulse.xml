@@ -14,16 +14,17 @@
     </ts:contract>
     
     <ts:origins>
-        <ethereum:event contract="NFTPulseToken" type="Transfer" filter="to=${ownerAddress}">
+        <ethereum:event contract="NFTPulseToken" type="TransferSingle" filter="to=${ownerAddress}">
             <ts:data>
-                <ts:uint256 ref="tokenId"/>
+                <ts:uint256 ref="id"/>
+                <ts:uint256 ref="value"/>
             </ts:data>
         </ethereum:event>
     </ts:origins>
     
-    <ts:selection filter="(tokenId=${tokenId})">
+    <ts:selection filter="(id=${id})">
         <ts:label>
-            <ts:string xml:lang="en">NFT Pulse Token #${tokenId}</ts:string>
+            <ts:string xml:lang="en">NFT Pulse Token #${id}</ts:string>
         </ts:label>
     </ts:selection>
     
@@ -45,8 +46,8 @@
                 <script type="text/javascript">
                     class Token {
                         constructor(tokenInstance) {
-                            this.name = 'NFT Pulse Token #' + tokenInstance.tokenId;
-                            this.image = 'https://api.nftpulse.com/token-image/' + tokenInstance.tokenId;
+                            this.name = 'NFT Pulse Token #' + tokenInstance.id;
+                            this.image = 'https://api.nftpulse.com/token-image/' + tokenInstance.id;
                             this.description = 'A unique NFT Pulse Token ready for the moon!';
                             this.moonVotes = 0;
                             this.rektVotes = 0;
@@ -158,13 +159,13 @@
                 </style>
                 <script type="text/javascript">
                     function generateTlink() {
-                        const tokenId = Math.floor(Math.random() * 10000);
-                        const tlink = `https://viewer.tokenscript.org/?chain=1&contract=0x1234567890123456789012345678901234567890&tokenId=${tokenId}`;
+                        const id = Math.floor(Math.random() * 10000);
+                        const tlink = `https://viewer.tokenscript.org/?chain=1&contract=0x1234567890123456789012345678901234567890&tokenId=${id}`;
                         
                         const tlinkList = document.getElementById('tlinkList');
                         const listItem = document.createElement('li');
                         listItem.className = 'tlink-item';
-                        listItem.innerHTML = `<a href="${tlink}" class="tlink" target="_blank">Tlink for Token #${tokenId}</a>`;
+                        listItem.innerHTML = `<a href="${tlink}" class="tlink" target="_blank">Tlink for Token #${id}</a>`;
                         tlinkList.appendChild(listItem);
                     }
                 </script>
@@ -229,7 +230,7 @@
         <ts:origins>
             <ethereum:call function="getMoonVotes" contract="NFTPulseToken" as="uint">
                 <ethereum:data>
-                    <ethereum:uint256 ref="tokenId"/>
+                    <ethereum:uint256 ref="id"/>
                 </ethereum:data>
             </ethereum:call>
         </ts:origins>
@@ -245,7 +246,7 @@
         <ts:origins>
             <ethereum:call function="getRektVotes" contract="NFTPulseToken" as="uint">
                 <ethereum:data>
-                    <ethereum:uint256 ref="tokenId"/>
+                    <ethereum:uint256 ref="id"/>
                 </ethereum:data>
             </ethereum:call>
         </ts:origins>
